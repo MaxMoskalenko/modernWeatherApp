@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather</title>
+
+  <link rel="stylesheet" href="styles/moreinfo.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Titillium+Web" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+      <h1>Modern weather app</h1>
+  </header>
+  <nav>
+      <a href="forecast.html">Forecast</a>
+      <a href="" class="active">More Info</a>
+      <!-- <a href="data/api.php">API</a> -->
+  </nav>
+  <main>
+      <div class="container">
+          <div class="up">
+            <div class="form">
+              <p>Choose city: </p>
+              <input id="city" type="text" value="Kropyvnytskyi">
+              <img id="fc-city-icon" alt="wait...">
+            </div>
+            <div class="temperature">
+              <div class="temp-current">
+                <p id="curTemp"></p>
+              </div>
+              <div class="temp-min-max">
+                <div class="temp-min">
+                  <pre>Min: </pre>
+                  <p id="minTemp"></p>
+                </div>
+                <div class="temp-max">
+                  <pre>Max: </pre>
+                  <p id="maxTemp"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="down">
+            <div class="sky">
+              <div class="day">
+                <h1 style="font-size:25px; margin-left:20px">DAY</h1>
+                <ul>
+                  <li>
+                    <pre>Precipitation Probability: </pre>
+                    <p id="probD"></p>
+                    <p>%</p>
+                  </li>
+                  <li>
+                    <pre>Wind Speed: </pre>
+                    <p id="speedD"></p>
+                    <p>mi/h</p>
+                  </li>
+                  <li>
+                    <pre>Direction: </pre>
+                    <p id="dirD"></p>
+                  </li>
+                  <li>
+                    <pre>Clouds cover: </pre>
+                    <p id="cloudsD"></p>
+                    <p>%</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="night">
+                <h1 style="font-size:25px; margin-left:20px">NIGHT</h1>
+                <ul>
+                  <li>
+                    <pre>Precipitation Probability: </pre>
+                    <p id="probN"></p>
+                    <p>%</p>
+                  </li>
+                  <li>
+                    <pre>Wind Speed: </pre>
+                    <p id="speedN"></p>
+                    <p>mi/h</p>
+                  </li>
+                  <li>
+                    <pre>Direction: </pre>
+                    <p id="dirN"></p>
+                  </li>
+                  <li>
+                    <pre>Clouds cover: </pre>
+                    <p id="cloudsN"></p>
+                    <p>%</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="rise">
+            <div class="sun">
+              <div class="img">
+                <img src="https://vortex.accuweather.com/adc2010/images/slate/icons/1.svg" alt="wait...">
+              </div>
+                <ul>
+                  <li>
+                    <pre>Rise of Sun: </pre>
+                    <p id="SRise"></p>
+                  </li>
+                  <li>
+                    <pre>Set of Sun: </pre>
+                    <p id="SSet"></p>
+                  </li>
+                  <li>
+                    <pre>Hours of Sun: </pre>
+                    <p id="SHours"></p>
+                  </li>
+                </ul>
+            </div>
+            <div class="moon">
+              <div class="img">
+                <img src="https://vortex.accuweather.com/adc2010/images/slate/icons/33.svg" alt="wait...">
+              </div>
+              <ul>
+                <li>
+                  <pre>Rise of Moon: </pre>
+                  <p id="MRise"></p>
+                </li>
+                <li>
+                  <pre>Set of Moon: </pre>
+                  <p id="MSet"></p>
+                </li>
+                <li>
+                  <pre>Moon day: </pre>
+                  <p id="MDay"></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="add">
+            <button id="addCity" onclick="addCity()" name="button" type="button">
+              Add new city
+            </button>
+          </div>
+      </div>
+  </main>
+  <script src="scripts/moreInfo.js">
+  </script>
+</body>
+</html>
